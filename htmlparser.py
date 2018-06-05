@@ -241,7 +241,7 @@ for x in trashratingsarr:
    if len(x) == 2:
       x = int(x)
       hawksratings.append(x)
-hawksratings.sort(reverse = True)
+#hawksratings.sort(reverse = True)
 trashratingsarr = []
 
 for x in celticsspan:
@@ -598,12 +598,13 @@ for x in wizardsresult:
 
 #for x in hawksratings:
   #  myarr.append(x.get_text())
-for x in hawksplayers:
+'''for x in hawksplayers:
    x = x.encode("utf-8")
    if "\xe2\x80\x99" in x:
       x = x.replace("\xe2\x80\x99","'")
    if "Rookie" in x:
         x = x.replace("Rookie","")
+'''
 for x in celticsplayers:
     if "Rookie" in x:
         x = x.replace("Rookie","")
@@ -692,13 +693,161 @@ for x in wizardsplayers:
     if "Rookie" in x:
         x = x.replace("Rookie","")
 
+playerroster = [hawksplayers, netsplayers]
+soloplayerroster = []
+for teams in playerroster:
+   # print("1")
+    for players in teams:
+      # print("2")
+       player = players.encode('ascii','ignore')
+       player = players.replace("Rookie","")
+      # print(player)
+      # player = players.replace("\xe2\x80\x99","'")
+       soloplayerroster.append(player)
+   # teams = [x.encode('utf8') for x in teams]
+   # teams = [x.replace("Rookie","") for x in teams]
+   # teams = [x.replace("\xe2\x80\x99","'") for x in teams]
+
+#for x in soloplayerroster:
+ #  print(x)
+#print(soloplayerroster)
+if "Dennis Schroder" in soloplayerroster:
+   print("yes")
+else:
+   print("no")
+   '''
+hawksplayers = [x.encode('utf8') for x in hawksplayers]
+hawksplayers = [x.replace("Rookie","") for x in hawksplayers]
+hawksplayers = [x.replace("\xe2\x80\x99","'") for x in hawksplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+netsplayers = [x.encode('utf8') for x in netsplayers]
+netsplayers = [x.replace("Rookie","") for x in netsplayers]
+netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
+
+'''
+
+#print(hawksplayers)
 #for x in hawksplayers:
   # x = x.encode("utf-8")
 #hawksplayers = [x.encode('utf8') for x in hawksplayers]
-print(hawksplayers)
-print(hawksratings)
-#hawksdictionary = dict(zip(hawksplayers,hawksratings))
+#print(hawksplayers)
+#print(hawksratings)
+hawksdictionary = dict(zip(hawksplayers,hawksratings))
 #print(hawksdictionary)
+
+#print(netsplayers)
 
 # ------- THIS WORKS ----------#
 
