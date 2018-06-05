@@ -222,19 +222,32 @@ jazzratings = []
 raptorsratings = []
 wizardsratings = []
 
+spanplayers = [hawksspan, celticsspan, netsspan, hornetsspan, bullsspan, cavaliersspan, mavericksspan, nuggetsspan, pistonsspan, warriorsspan, rocketsspan, pacersspan, clippersspan, lakersspan, grizzliesspan,heatspan, bucksspan, timberwolvesspan, pelicansspan, knicksspan, thunderspan, magicspan, philadelphiaspan, sunsspan, trailblazersspan, kingsspan, spursspan, jazzspan, raptorsspan, wizardsspan]
+playerratings = []
+for teams in spanplayers:
+   for ratings in teams:
+      trashratingsarr.append(ratings.get_text())
+
+for x in trashratingsarr:
+   if len(x) == 2:
+      x = int(x)
+      playerratings.append(x)
+#print(playerratings)
+   
+#playerratings = []
 # VVVVV WORKING SOLO CASE VVVVV #
 # KEEP IN CASE OTHERS FUCK UP #
 '''for x in hawksspan:
    trashratingsarr.append(x.get_text())
 for x in trashratingsarr:
-   if len(x)==2:
+   if len(x)==2: 
        x=int(x)
        ratingsarr.append(x)
 ratingsarr.sort(reverse=True)
 trashratingsarr = [] #reset array after each time
 '''
 # ^^^^^ WORKING SOLO CASE ^^^^^ #
-
+'''
 for x in hawksspan:
    trashratingsarr.append(x.get_text())
 for x in trashratingsarr:
@@ -504,7 +517,7 @@ for x in trashratingsarr:
       wizardsratings.append(x)
 wizardsratings.sort(reverse = True)
 trashratingsarr = []
-
+'''
 hawksplayers = []
 celticsplayers = []
 netsplayers = []
@@ -605,95 +618,7 @@ for x in wizardsresult:
    if "Rookie" in x:
         x = x.replace("Rookie","")
 '''
-for x in celticsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in netsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in hornetsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in bullsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in cavaliersplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in mavericksplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in nuggetsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in pistonsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in warriorsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in rocketsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in pacersplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in clippersplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in lakersplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in grizzliesplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in heatplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in bucksplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in timberwolvesplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in pelicansplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in knicksplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in thunderplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in magicplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in philadelphiaplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in sunsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in trailblazersplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in kingsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in spursplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in jazzplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in raptorsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-for x in wizardsplayers:
-    if "Rookie" in x:
-        x = x.replace("Rookie","")
-
-playerroster = [hawksplayers, netsplayers]
+playerroster = [hawksplayers, celticsplayers, netsplayers, hornetsplayers, bullsplayers, cavaliersplayers, mavericksplayers, nuggetsplayers, pistonsplayers, warriorsplayers, rocketsplayers, pacersplayers, clippersplayers, lakersplayers, grizzliesplayers, heatplayers, bucksplayers, timberwolvesplayers, pelicansplayers, knicksplayers, thunderplayers, magicplayers, philadelphiaplayers, sunsplayers, trailblazersplayers, kingsplayers, spursplayers, jazzplayers, raptorsplayers, wizardsplayers]
 soloplayerroster = []
 for teams in playerroster:
    # print("1")
@@ -711,140 +636,16 @@ for teams in playerroster:
 #for x in soloplayerroster:
  #  print(x)
 #print(soloplayerroster)
-if "Dennis Schroder" in soloplayerroster:
-   print("yes")
-else:
-   print("no")
-   '''
-hawksplayers = [x.encode('utf8') for x in hawksplayers]
-hawksplayers = [x.replace("Rookie","") for x in hawksplayers]
-hawksplayers = [x.replace("\xe2\x80\x99","'") for x in hawksplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-netsplayers = [x.encode('utf8') for x in netsplayers]
-netsplayers = [x.replace("Rookie","") for x in netsplayers]
-netsplayers = [x.replace("\xe2\x80\x99","'") for x in netsplayers]
-
-'''
-
-#print(hawksplayers)
-#for x in hawksplayers:
-  # x = x.encode("utf-8")
-#hawksplayers = [x.encode('utf8') for x in hawksplayers]
-#print(hawksplayers)
-#print(hawksratings)
-hawksdictionary = dict(zip(hawksplayers,hawksratings))
+soloplayerroster = [x.encode('utf8') for x in soloplayerroster]
+soloplayerroster = [x.replace("Rookie","") for x in soloplayerroster]
+soloplayerroster = [x.replace("\xe2\x80\x99","'") for x in soloplayerroster]
+soloplayerroster = [x.rstrip() for x in soloplayerroster]
+#print(soloplayerroster)
+thenbaroster = dict(zip(soloplayerroster,playerratings))
+#print(thenbaroster)
+for x,y in thenbaroster.items():
+   print(x,y)
+#hawksdictionary = dict(zip(hawksplayers,hawksratings))
 #print(hawksdictionary)
 
 #print(netsplayers)
