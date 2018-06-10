@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests #allows us to download html from urls
-
+import csv
+import pandas as dapanda
 page = requests.get("https://www.draftkings.com/draft/contest/56828613") #for the game you parse
 
 soup = BeautifulSoup(page.content, 'html.parser') #.content call returns actual html
@@ -144,20 +145,6 @@ wizardsresult = wizardspage.find_all('td',class_ = "roster-entry")
 ratingsarr = []
 trashratingsarr = []
 teamresultsarr = [hawkspage,celticspage,netspage,hornetspage,bullspage,cavalierspage,maverickspage,nuggetspage,pistonspage,warriorspage,rocketspage,pacerspage,clipperspage,lakerspage,grizzliespage,heatpage,buckspage,timberwolvespage,pelicanspage,knickspage,thunderpage,magicpage,philadelphiapage,sunspage,trailblazerspage,kingspage,spurspage,jazzpage,raptorspage,wizardspage]
-
-# vvvvv MULTICASE TEAM RATING vvvvv #
-'''for x in teamresultsarr:
-   teamspan = x.find_all('span')
-   for y in teamspan:
-      trashratingsarr.append(y.get_text())
-   for z in trashratingsarr:
-      if len(z) == 2:
-         z = int(z)
-         ratingsarr.append(z)
-#ratingsarr.sort(reverse=True)
-for x in ratingsarr:
-  print(x)'''
-# ^^^^^ MULTICASE TEAM RATING ^^^^^ #
    
 
 hawksspan = hawkspage.find_all('span')
@@ -234,290 +221,6 @@ for x in trashratingsarr:
       playerratings.append(x)
 #print(playerratings)
    
-#playerratings = []
-# VVVVV WORKING SOLO CASE VVVVV #
-# KEEP IN CASE OTHERS FUCK UP #
-'''for x in hawksspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x)==2: 
-       x=int(x)
-       ratingsarr.append(x)
-ratingsarr.sort(reverse=True)
-trashratingsarr = [] #reset array after each time
-'''
-# ^^^^^ WORKING SOLO CASE ^^^^^ #
-'''
-for x in hawksspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      hawksratings.append(x)
-#hawksratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in celticsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      celticsratings.append(x)
-celticsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in netsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      netsratings.append(x)
-netsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in hornetsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      hornetsratings.append(x)
-hornetsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in bullsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      bullsratings.append(x)
-bullsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in cavaliersspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      cavaliersratings.append(x)
-cavaliersratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in mavericksspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      mavericksratings.append(x)
-mavericksratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in nuggetsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      nuggetsratings.append(x)
-nuggetsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in pistonsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      pistonsratings.append(x)
-pistonsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in warriorsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      warriorsratings.append(x)
-warriorsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in rocketsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      rocketsratings.append(x)
-rocketsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in pacersspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      pacersratings.append(x)
-pacersratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in clippersspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      clippersratings.append(x)
-clippersratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in lakersspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      lakersratings.append(x)
-lakersratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in grizzliesspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      grizzliesratings.append(x)
-grizzliesratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in heatspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      heatratings.append(x)
-heatratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in bucksspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      bucksratings.append(x)
-bucksratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in timberwolvesspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      timberwolvesratings.append(x)
-timberwolvesratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in pelicansspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      pelicansratings.append(x)
-pelicansratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in knicksspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      knicksratings.append(x)
-knicksratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in thunderspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      thunderratings.append(x)
-thunderratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in magicspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      magicratings.append(x)
-magicratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in philadelphiaspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      philadelphiaratings.append(x)
-philadelphiaratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in sunsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      sunsratings.append(x)
-sunsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in trailblazersspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      trailblazersratings.append(x)
-trailblazersratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in kingsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      kingsratings.append(x)
-kingsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in spursspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      spursratings.append(x)
-spursratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in jazzspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      jazzratings.append(x)
-jazzratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in raptorsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      raptorsratings.append(x)
-raptorsratings.sort(reverse = True)
-trashratingsarr = []
-
-for x in wizardsspan:
-   trashratingsarr.append(x.get_text())
-for x in trashratingsarr:
-   if len(x) == 2:
-      x = int(x)
-      wizardsratings.append(x)
-wizardsratings.sort(reverse = True)
-trashratingsarr = []
-'''
 hawksplayers = []
 celticsplayers = []
 netsplayers = []
@@ -609,15 +312,6 @@ for x in raptorsresult:
 for x in wizardsresult:
     wizardsplayers.append(x.get_text())
 
-#for x in hawksratings:
-  #  myarr.append(x.get_text())
-'''for x in hawksplayers:
-   x = x.encode("utf-8")
-   if "\xe2\x80\x99" in x:
-      x = x.replace("\xe2\x80\x99","'")
-   if "Rookie" in x:
-        x = x.replace("Rookie","")
-'''
 playerroster = [hawksplayers, celticsplayers, netsplayers, hornetsplayers, bullsplayers, cavaliersplayers, mavericksplayers, nuggetsplayers, pistonsplayers, warriorsplayers, rocketsplayers, pacersplayers, clippersplayers, lakersplayers, grizzliesplayers, heatplayers, bucksplayers, timberwolvesplayers, pelicansplayers, knicksplayers, thunderplayers, magicplayers, philadelphiaplayers, sunsplayers, trailblazersplayers, kingsplayers, spursplayers, jazzplayers, raptorsplayers, wizardsplayers]
 soloplayerroster = []
 for teams in playerroster:
@@ -626,16 +320,8 @@ for teams in playerroster:
       # print("2")
        player = players.encode('ascii','ignore')
        player = players.replace("Rookie","")
-      # print(player)
-      # player = players.replace("\xe2\x80\x99","'")
        soloplayerroster.append(player)
-   # teams = [x.encode('utf8') for x in teams]
-   # teams = [x.replace("Rookie","") for x in teams]
-   # teams = [x.replace("\xe2\x80\x99","'") for x in teams]
 
-#for x in soloplayerroster:
- #  print(x)
-#print(soloplayerroster)
 soloplayerroster = [x.encode('utf8') for x in soloplayerroster]
 soloplayerroster = [x.replace("Rookie","") for x in soloplayerroster]
 soloplayerroster = [x.replace("\xe2\x80\x99","'") for x in soloplayerroster]
@@ -643,8 +329,8 @@ soloplayerroster = [x.rstrip() for x in soloplayerroster]
 #print(soloplayerroster)
 thenbaroster = dict(zip(soloplayerroster,playerratings))
 #print(thenbaroster)
-for x,y in thenbaroster.items():
-   print(x,y)
+#for x,y in thenbaroster.items():
+  # print(x,y)
 #hawksdictionary = dict(zip(hawksplayers,hawksratings))
 #print(hawksdictionary)
 
@@ -653,3 +339,22 @@ for x,y in thenbaroster.items():
 # ------- THIS WORKS ----------#
 
     #print(prettyhawks.find_all('a'))
+'''
+with open('DKSalaries.csv') as csvfile:
+   lines = csv.reader(csvfile, delimiter = ' ', quotechar = '|')
+   for x in lines:
+      print x
+'''
+
+mycsv = dapanda.read_csv('DKSalaries.csv')
+namecolumn = mycsv.Name
+salarycolumn = mycsv.Salary
+namesalary = dict(zip(namecolumn,salarycolumn))
+print(namesalary)
+#for x in salarycolumn:
+#   print(x)
+#print(salarycolumn)
+#print(namecolumn)
+#for x in namecolumn:
+ #  print(isinstance(x,str))
+   
