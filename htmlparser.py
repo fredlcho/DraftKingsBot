@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from sets import Set
 import requests #allows us to download html from urls
 import csv
 import pandas as dapanda
@@ -346,11 +347,27 @@ with open('DKSalaries.csv') as csvfile:
       print x
 '''
 
-mycsv = dapanda.read_csv('DKSalaries.csv')
-namecolumn = mycsv.Name
-salarycolumn = mycsv.Salary
-namesalary = dict(zip(namecolumn,salarycolumn))
-print(namesalary)
+mycsv = dapanda.read_csv('DKSalariesmlb.csv',names = ['Position', 'Name+ID','Name','ID','RosterPosition','Salary','Gameinfo','Teamabbr','avgpts','pergame'])
+#print(mycsv)
+#csvcolumns = [x.replace(" ","") for x in mycsv.columns]
+
+#print(mycsv)
+
+
+
+#print(columns)
+#namecolumn = mycsv.Name
+#salarycolumn = mycsv.Salary
+gamecolumn = mycsv.Gameinfo
+#namesalary = dict(zip(namecolumn,salarycolumn))
+games = Set([])
+for x in gamecolumn:
+   games.add(x)
+
+print(games)
+#print(namecolumn)
+#print(gamecolumn)
+#print(namesalary)
 #for x in salarycolumn:
 #   print(x)
 #print(salarycolumn)
