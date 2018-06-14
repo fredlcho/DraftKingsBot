@@ -3,6 +3,7 @@ from sets import Set
 import requests #allows us to download html from urls
 import csv
 import pandas as dapanda
+import itertools as myitertool
 page = requests.get("https://www.draftkings.com/draft/contest/56828613") #for the game you parse
 
 soup = BeautifulSoup(page.content, 'html.parser') #.content call returns actual html
@@ -356,15 +357,13 @@ mycsv = dapanda.read_csv('DKSalariesmlb.csv',names = ['Position', 'Name+ID','Nam
 
 
 #print(columns)
-#namecolumn = mycsv.Name
-#salarycolumn = mycsv.Salary
-gamecolumn = mycsv.Gameinfo
-#namesalary = dict(zip(namecolumn,salarycolumn))
-games = Set([])
-for x in gamecolumn:
-   games.add(x)
-
-print(games)
+namecolumn = mycsv.Name
+salarycolumn = mycsv.Salary
+positioncolumn = mycsv.Position
+playerinfo = zip(namecolumn,salarycolumn,positioncolumn)
+thecombos = list(myitertool.combinations(playerinfo,8))
+print(thecombos)
+#print(games)
 #print(namecolumn)
 #print(gamecolumn)
 #print(namesalary)
