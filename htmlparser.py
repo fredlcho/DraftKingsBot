@@ -339,8 +339,8 @@ thenbaroster = dict(zip(soloplayerroster,playerratings))
 #print(thenbaroster.get('Blake Griffin'))
 #for x,y in thenbaroster.items():
 #   print(x,y)
-for x in sorted(thenbaroster.iterkeys()):
-   print "%s: %s" % (x, thenbaroster[x])
+#for x in sorted(thenbaroster.iterkeys()):
+#   print "%s: %s" % (x, thenbaroster[x])
 #hawksdictionary = dict(zip(hawksplayers,hawksratings))
 #print(hawksdictionary)
 
@@ -368,21 +368,30 @@ mycsv = dapanda.read_csv('pid-file-nba.csv',names = ['Position', 'Name+ID','Name
 namecolumn = mycsv.Name
 salarycolumn = mycsv.Salary
 positioncolumn = mycsv.Position
-towkrating = []
-twokratingg = [thenbaroster.get(x) for x in namecolumn]
+twokratingg = []
+for x in namecolumn:
+   if thenbaroster.get(x) != None:
+      twokratingg.append(thenbaroster.get(x))
+
+
 
 #print(thenbaroster)
-playerz = dict(zip(namecolumn, twokratingg))
-#print(playerz)
+playerz = zip(namecolumn, twokratingg,salarycolumn,positioncolumn)
+#for x in sorted(playerz.iterkeys()):
+#   print "%s: %s" % (x,playerz[x])
+#for x in playerz:
+#   print(x)
+print(playerz)
 #for x in playerz:
 #   if playerz.get(x) == None:
 #      print(x)
 #print(playerz.get('Blake Griffin'))
 #print(namecolumn)
-playerinfo = zip(namecolumn,salarycolumn,positioncolumn)
+#playerinfo = zip(namecolumn,salarycolumn,positioncolumn)
 
 
-
+#for x in sorted(thenbaroster.iterkeys()):
+#   print "%s: %s" % (x, thenbaroster[x])
 
 
 
