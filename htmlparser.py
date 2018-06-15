@@ -25,7 +25,7 @@ dallasmavericks = requests.get("https://www.2kratings.com/nba2k18-team/dallas-ma
 
 denvernuggets = requests.get("https://www.2kratings.com/nba2k18-team/denver-nuggets")
 
-detroitpistons = requests.get("https://www.2kratings.com/nba2k18-team/detriot-pistons")
+detroitpistons = requests.get("http://www.2kratings.com/nba2k18-team/detroit-pistons")
 
 goldenstatewarriors = requests.get("https://www.2kratings.com/nba2k18-team/golden-state-warriors")
 
@@ -68,7 +68,10 @@ utahjazz = requests.get("https://www.2kratings.com/nba2k18-team/utah-jazz")
 torontoraptors = requests.get("https://www.2kratings.com/nba2k18-team/toronto-raptors")
 
 washingtonwizards = requests.get("https://www.2kratings.com/nba2k18-team/washington-wizards")
-
+#print(utahjazz)
+#print(torontoraptors)
+#print(detroitpistons)
+#print(washingtonwizards)
 hawkspage = BeautifulSoup(atlantahawks.content,'html.parser')
 celticspage = BeautifulSoup(bostonceltics.content,'html.parser')
 netspage = BeautifulSoup(brooklynnets.content,'html.parser')
@@ -99,7 +102,8 @@ spurspage = BeautifulSoup(sanantoniospurs.content,'html.parser')
 jazzpage = BeautifulSoup(utahjazz.content,'html.parser')
 raptorspage = BeautifulSoup(torontoraptors.content,'html.parser')
 wizardspage = BeautifulSoup(washingtonwizards.content,'html.parser')
-
+#print(sunspage)
+#print(pistonspage)
 #print(hawkspage.find("div",class_="roster-entry").text)
 #prettyhawks = hawkspage.prettify()
 
@@ -143,6 +147,7 @@ jazzresult = jazzpage.find_all('td',class_ = "roster-entry")
 raptorsresult = raptorspage.find_all('td',class_ = "roster-entry")
 wizardsresult = wizardspage.find_all('td',class_ = "roster-entry")
 
+#print(pistonsresult)
 #hawksratings = hawkspage.find_all('td',class_= "sorting_1")
 ratingsarr = []
 trashratingsarr = []
@@ -313,7 +318,8 @@ for x in raptorsresult:
     raptorsplayers.append(x.get_text())
 for x in wizardsresult:
     wizardsplayers.append(x.get_text())
-
+#print(wizardsplayers)
+#print(pistonsplayers)
 playerroster = [hawksplayers, celticsplayers, netsplayers, hornetsplayers, bullsplayers, cavaliersplayers, mavericksplayers, nuggetsplayers, pistonsplayers, warriorsplayers, rocketsplayers, pacersplayers, clippersplayers, lakersplayers, grizzliesplayers, heatplayers, bucksplayers, timberwolvesplayers, pelicansplayers, knicksplayers, thunderplayers, magicplayers, philadelphiaplayers, sunsplayers, trailblazersplayers, kingsplayers, spursplayers, jazzplayers, raptorsplayers, wizardsplayers]
 soloplayerroster = []
 for teams in playerroster:
@@ -330,9 +336,11 @@ soloplayerroster = [x.replace("\xe2\x80\x99","'") for x in soloplayerroster]
 soloplayerroster = [x.rstrip() for x in soloplayerroster]
 #print(soloplayerroster)
 thenbaroster = dict(zip(soloplayerroster,playerratings))
-#print(thenbaroster)
+#print(thenbaroster.get('Blake Griffin'))
 #for x,y in thenbaroster.items():
-  # print(x,y)
+#   print(x,y)
+for x in sorted(thenbaroster.iterkeys()):
+   print "%s: %s" % (x, thenbaroster[x])
 #hawksdictionary = dict(zip(hawksplayers,hawksratings))
 #print(hawksdictionary)
 
@@ -348,7 +356,7 @@ with open('DKSalaries.csv') as csvfile:
       print x
 '''
 
-mycsv = dapanda.read_csv('DKSalariesmlb.csv',names = ['Position', 'Name+ID','Name','ID','RosterPosition','Salary','Gameinfo','Teamabbr','avgpts','pergame'])
+mycsv = dapanda.read_csv('pid-file-nba.csv',names = ['Position', 'Name+ID','Name','ID','RosterPosition','Salary','Gameinfo','Teamabbr'])
 #print(mycsv)
 #csvcolumns = [x.replace(" ","") for x in mycsv.columns]
 
@@ -360,9 +368,33 @@ mycsv = dapanda.read_csv('DKSalariesmlb.csv',names = ['Position', 'Name+ID','Nam
 namecolumn = mycsv.Name
 salarycolumn = mycsv.Salary
 positioncolumn = mycsv.Position
+towkrating = []
+twokratingg = [thenbaroster.get(x) for x in namecolumn]
+
+#print(thenbaroster)
+playerz = dict(zip(namecolumn, twokratingg))
+#print(playerz)
+#for x in playerz:
+#   if playerz.get(x) == None:
+#      print(x)
+#print(playerz.get('Blake Griffin'))
+#print(namecolumn)
 playerinfo = zip(namecolumn,salarycolumn,positioncolumn)
-thecombos = list(myitertool.combinations(playerinfo,8))
-print(thecombos)
+
+
+
+
+
+
+#thecombos = list(myitertool.combinations(playerinfo,8))
+#combs = []
+#for x in xrange(1, len(playerinfo)+1):
+#   els = [list(x) for x in myitertool.combinations(playerinfo,8)]
+#   combs.extend(els)
+
+#print(combs)
+   
+#print(thecombos)
 #print(games)
 #print(namecolumn)
 #print(gamecolumn)
@@ -373,4 +405,3 @@ print(thecombos)
 #print(namecolumn)
 #for x in namecolumn:
  #  print(isinstance(x,str))
-   
