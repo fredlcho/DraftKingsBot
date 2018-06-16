@@ -373,44 +373,26 @@ for x in namecolumn:
    if thenbaroster.get(x) != None:
       twokratingg.append(thenbaroster.get(x))
 
-
-
-#print(thenbaroster)
-playerz = zip(namecolumn, twokratingg,salarycolumn,positioncolumn)
-#for x in sorted(playerz.iterkeys()):
-#   print "%s: %s" % (x,playerz[x])
-#for x in playerz:
-#   print(x)
-print(playerz)
-#for x in playerz:
-#   if playerz.get(x) == None:
-#      print(x)
-#print(playerz.get('Blake Griffin'))
+#fix these lists
+namecolumn = list(namecolumn)
+namecolumn.pop(0)
+namecolumn = [x for x in namecolumn if str(x) != 'nan']
 #print(namecolumn)
-#playerinfo = zip(namecolumn,salarycolumn,positioncolumn)
 
+salarycolumn = list(salarycolumn)
+salarycolumn.pop(0)
+salarycolumn = [x for x in salarycolumn if str(x) != 'nan']
+salarycolumn = [int(x) for x in salarycolumn]
 
-#for x in sorted(thenbaroster.iterkeys()):
-#   print "%s: %s" % (x, thenbaroster[x])
+positioncolumn = list(positioncolumn)
+positioncolumn.pop(0)
 
+playerinfo = zip(namecolumn,salarycolumn,twokratingg,positioncolumn)
+for x in playerinfo:
+   print(x)
 
-
-#thecombos = list(myitertool.combinations(playerinfo,8))
-#combs = []
-#for x in xrange(1, len(playerinfo)+1):
-#   els = [list(x) for x in myitertool.combinations(playerinfo,8)]
-#   combs.extend(els)
-
-#print(combs)
-   
-#print(thecombos)
-#print(games)
-#print(namecolumn)
-#print(gamecolumn)
-#print(namesalary)
-#for x in salarycolumn:
-#   print(x)
-#print(salarycolumn)
-#print(namecolumn)
-#for x in namecolumn:
- #  print(isinstance(x,str))
+pg = []
+sg = []
+sf = []
+pf = []
+c = []
