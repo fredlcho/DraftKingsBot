@@ -388,11 +388,38 @@ positioncolumn = list(positioncolumn)
 positioncolumn.pop(0)
 
 playerinfo = zip(namecolumn,salarycolumn,twokratingg,positioncolumn)
-for x in playerinfo:
-   print(x)
+#for x in playerinfo:
+#   print(x)
 
 pg = []
 sg = []
 sf = []
 pf = []
 c = []
+
+for x in range(0,len(playerinfo)):
+   if playerinfo[x][3] == 'PG':
+      pg.append(playerinfo[x])
+   else if playerinfo[x][3] == 'PG/SG':
+      pg.append(playerinfo[x])
+      sg.append(playerinfo[x])
+   else if playerinfo[x][3] == 'SG':
+      sg.append(playerinfo[x])
+   else if playerinfo[x][3] == 'SG/SF':
+      sg.append(playerinfo[x])
+      sf.append(playerinfo[x])
+   else if playerinfo[x][3] == 'SF':
+      sf.append(playerinfo[x])
+   else if playerinfo[x][3] == 'SF/PF':
+      sf.append(playerinfo[x])
+      pf.append(playerinfo[x])
+   else if playerinfo[x][3] == 'PF':
+      pf.append(playerinfo[x])
+   else if playerinfo[x][3] == 'PF/C':
+      pf.append(playerinfo[x])
+      c.append(playerinfo[x])
+   else if layerinfo[x][3] == 'C':
+      c.append(playerinfo[x])
+
+for x in pg:
+   print(x)
