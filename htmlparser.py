@@ -391,12 +391,16 @@ playerinfo = zip(namecolumn,salarycolumn,twokratingg,positioncolumn)
 #for x in playerinfo:
 #   print(x)
 
-pg = []
-sg = []
-sf = []
-pf = []
+#pg = []
+pgwithpgsg = []
+#sg = []
+sgwithsgsf = []
+#sf = []
+sfwithsfpf = []
+#pf = []
+pfwithpfc = []
 c = []
-
+pgandsg = []
 for x in range(0,len(playerinfo)):
    if playerinfo[x][3] == 'PG':
       pg.append(playerinfo[x])
@@ -421,5 +425,10 @@ for x in range(0,len(playerinfo)):
    else if layerinfo[x][3] == 'C':
       c.append(playerinfo[x])
 
+def calculate(pg, sg, sf, pf, c):
+   result = []
+   temp = []
+   
+   
 for x in pg:
    print(x)
