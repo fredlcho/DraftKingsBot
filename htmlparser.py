@@ -428,7 +428,11 @@ for x in range(0,len(playerinfo)):
 def calculate(pg, sg, sf, pf, c):
    result = []
    temp = []
-   
+   for a in pg:
+      for b in sg:
+         for c in sf:
+            for d in pf:
+               for e in c:
    
 for x in pg:
    print(x)
