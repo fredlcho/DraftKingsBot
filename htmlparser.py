@@ -436,3 +436,4 @@ def calculate(pg, sg, sf, pf, c):
    
 for x in pg:
    print(x)
+   print('hey')
