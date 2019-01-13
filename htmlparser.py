@@ -4,14 +4,52 @@ import requests #allows us to download html from urls
 import csv
 import pandas as dapanda
 import itertools as myitertool
-page = requests.get("https://www.draftkings.com/draft/contest/56828613") #for the game you parse
 
-soup = BeautifulSoup(page.content, 'html.parser') #.content call returns actual html
 
+def cleannames(array):
+    result = []
+    result = [x.encode('utf8') for x in array]
+    result = [x.replace("Rookie","") for x in result]
+    result = [x.replace(".","") for x in result]
+    result = [x.replace("\xe2\x80\x99","") for x in result]
+    result = [x.rstrip() for x in result]
+    return result
+nba2k19 = "https://www.2kratings.com/nba2k19-team/"
+nbateams = ["atlanta-hawks","boston-celtics","brooklyn-nets","charlotte-hornets","chicago-bulls","cleveland-cavaliers",
+"dallas-mavericks","denver-nuggets","detroit-pistons","golden-state-warriors","houston-rockets","indiana-pacers",
+"los-angeles-clippers","los-angeles-lakers","memphis-grizzlies","miami-heat","milwaukee-bucks","minnesota-timberwolves",
+"new-orleans-pelicans","new-york-knicks","oklahoma-city-thunder","orlando-magic","philadelphia-76ers","phoenix-suns",
+"portland-trail-blazers","sacramento-kings","san-antonio-spurs","utah-jazz","toronto-raptors","washington-wizards"]
+
+playersarray = []
+badratings = []
+for x in nbateams:
+    #print(nba2k19 + x)
+    currentteam = requests.get(nba2k19 + x)
+    teampage = BeautifulSoup(currentteam.content,'html.parser')
+    teamresult = teampage.find_all('td',class_ = "roster-entry")
+    teamspan = teampage.find_all('span')
+    for y in teamresult:
+        playersarray.append(y.get_text())
+    for z in teamspan:
+        badratings.append(z.get_text())
+
+ratings = [int(x) for x in badratings if len(x) == 2 ]
+
+players = cleannames(playersarray)
+# players = [x.encode('utf8') for x in playersarray]
+# players = [x.replace("Rookie","") for x in players]
+# players = [x.replace(".","") for x in players]
+# players = [x.replace("\xe2\x80\x99","") for x in players]
+# players = [x.rstrip() for x in players]
+#print(players)
+for x,y in zip(players,ratings):
+   print(x,y)
+#print(playersarray,'\n')
 ##these requests update the complete nba roster data struture##
-atlantahawks = requests.get("https://www.2kratings.com/nba2k18-team/atlanta-hawks")
-
-bostonceltics = requests.get("https://www.2kratings.com/nba2k18-team/boston-celtics")
+atlantahawks = requests.get("https://www.2kratings.com/nba2k19-team/atlanta-hawks")
+'''
+bostonceltics = requests.get("https://www.2kratings.com/nba2k19-team/boston-celtics")
 
 brooklynnets = requests.get("https://www.2kratings.com/nba2k18-team/brooklyn-nets")
 
@@ -68,10 +106,12 @@ utahjazz = requests.get("https://www.2kratings.com/nba2k18-team/utah-jazz")
 torontoraptors = requests.get("https://www.2kratings.com/nba2k18-team/toronto-raptors")
 
 washingtonwizards = requests.get("https://www.2kratings.com/nba2k18-team/washington-wizards")
-#print(utahjazz)
+'''
+#print(atlantahawks)
 #print(torontoraptors)
 #print(detroitpistons)
 #print(washingtonwizards)
+'''
 hawkspage = BeautifulSoup(atlantahawks.content,'html.parser')
 celticspage = BeautifulSoup(bostonceltics.content,'html.parser')
 netspage = BeautifulSoup(brooklynnets.content,'html.parser')
@@ -152,7 +192,7 @@ wizardsresult = wizardspage.find_all('td',class_ = "roster-entry")
 ratingsarr = []
 trashratingsarr = []
 teamresultsarr = [hawkspage,celticspage,netspage,hornetspage,bullspage,cavalierspage,maverickspage,nuggetspage,pistonspage,warriorspage,rocketspage,pacerspage,clipperspage,lakerspage,grizzliespage,heatpage,buckspage,timberwolvespage,pelicanspage,knickspage,thunderpage,magicpage,philadelphiapage,sunspage,trailblazerspage,kingspage,spurspage,jazzpage,raptorspage,wizardspage]
-   
+
 
 hawksspan = hawkspage.find_all('span')
 celticsspan = celticspage.find_all('span')
@@ -227,7 +267,7 @@ for x in trashratingsarr:
       x = int(x)
       playerratings.append(x)
 #print(playerratings)
-   
+
 hawksplayers = []
 celticsplayers = []
 netsplayers = []
@@ -332,7 +372,7 @@ for teams in playerroster:
 
 soloplayerroster = [x.encode('utf8') for x in soloplayerroster]
 soloplayerroster = [x.replace("Rookie","") for x in soloplayerroster]
-soloplayerroster = [x.replace("\xe2\x80\x99","'") for x in soloplayerroster]
+soloplayerroster = [x.replace("","'") for x in soloplayerroster]
 soloplayerroster = [x.rstrip() for x in soloplayerroster]
 #print(soloplayerroster)
 thenbaroster = dict(zip(soloplayerroster,playerratings))
@@ -350,12 +390,13 @@ thenbaroster = dict(zip(soloplayerroster,playerratings))
 
     #print(prettyhawks.find_all('a'))
 '''
+'''
 with open('DKSalaries.csv') as csvfile:
    lines = csv.reader(csvfile, delimiter = ' ', quotechar = '|')
    for x in lines:
       print x
 '''
-
+'''
 mycsv = dapanda.read_csv('pid-file-nba.csv',names = ['Position', 'Name+ID','Name','ID','RosterPosition','Salary','Gameinfo','Teamabbr'])
 #print(mycsv)
 #csvcolumns = [x.replace(" ","") for x in mycsv.columns]
@@ -433,7 +474,8 @@ def calculate(pg, sg, sf, pf, c):
          for c in sf:
             for d in pf:
                for e in c:
-   
+
 for x in pg:
    print(x)
    print('hey')
+   '''
