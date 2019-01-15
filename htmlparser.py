@@ -132,8 +132,8 @@ def calculate_salary(array,dictionary):
 
 answer = [None] * 5
 finalanswer = []
-for v,w,x,y,z in zip(pg,sg,sf,pf,center):
-    print(v,w,x,y,z)
+# for v,w,x,y,z in zip(pg,sg,sf,pf,center):
+#     print(v,w,x,y,z)
 average = 0
 temp_average = 0
 total_salary = 0
@@ -183,104 +183,3 @@ print(finalanswer)
 for x in finalanswer:
      print(player_dict.get(x)[0])
 print(average,total_salary,starters_total_salary)
-# print(type(sys.argv[2]))
-#print(average)
-#print(answer)
-
-
-# for x in pg_list:
-#     print(x)
-# print('\n')
-# for x in sg_list:
-#     print(x)
-# print('\n')
-# for x in sf_list:
-#     print(x)
-# for x,y,z in zip(pg_list,sg_list,sf_list):
-#     print(x,y,z)
-# print(pg)
-# print(sg)
-# print(sf)
-# print(pf)
-# print(c)
-
-
-'''
-#print(columns)
-namecolumn = mycsv.Name
-salarycolumn = mycsv.Salary
-positioncolumn = mycsv.Position
-
-for x,y,z in zip(namecolumn,salarycolumn,positioncolumn):
-    print(x,y,z)
-
-twokratingg = []
-for x in namecolumn:
-   if thenbaroster.get(x) != None:
-      twokratingg.append(thenbaroster.get(x))
-
-#fix these lists
-namecolumn = list(namecolumn)
-namecolumn.pop(0)
-namecolumn = [x for x in namecolumn if str(x) != 'nan']
-#print(namecolumn)
-
-salarycolumn = list(salarycolumn)
-salarycolumn.pop(0)
-salarycolumn = [x for x in salarycolumn if str(x) != 'nan']
-salarycolumn = [int(x) for x in salarycolumn]
-
-positioncolumn = list(positioncolumn)
-positioncolumn.pop(0)
-
-playerinfo = zip(namecolumn,salarycolumn,twokratingg,positioncolumn)
-#for x in playerinfo:
-#   print(x)
-
-#pg = []
-pgwithpgsg = []
-#sg = []
-sgwithsgsf = []
-#sf = []
-sfwithsfpf = []
-#pf = []
-pfwithpfc = []
-c = []
-pgandsg = []
-for x in range(0,len(playerinfo)):
-   if playerinfo[x][3] == 'PG':
-      pg.append(playerinfo[x])
-   elif playerinfo[x][3] == 'PG/SG':
-      pg.append(playerinfo[x])
-      sg.append(playerinfo[x])
-   elif playerinfo[x][3] == 'SG':
-      sg.append(playerinfo[x])
-   elif playerinfo[x][3] == 'SG/SF':
-      sg.append(playerinfo[x])
-      sf.append(playerinfo[x])
-   elif playerinfo[x][3] == 'SF':
-      sf.append(playerinfo[x])
-   elif playerinfo[x][3] == 'SF/PF':
-      sf.append(playerinfo[x])
-      pf.append(playerinfo[x])
-   elif playerinfo[x][3] == 'PF':
-      pf.append(playerinfo[x])
-   elif playerinfo[x][3] == 'PF/C':
-      pf.append(playerinfo[x])
-      c.append(playerinfo[x])
-   elif layerinfo[x][3] == 'C':
-      c.append(playerinfo[x])
-
-def calculate(pg, sg, sf, pf, c):
-   result = []
-   temp = []
-   for a in pg:
-      for b in sg:
-         for c in sf:
-            for d in pf:
-               for e in c:
-                   print('hi')
-for x in pg:
-   print(x)
-   print('hey')
-'''
