@@ -77,7 +77,7 @@ pg = {}
 sg = {}
 sf = {}
 pf = {}
-c = {}
+center = {}
 pg_list = []
 sg_list = []
 sf_list = []
@@ -96,7 +96,7 @@ for x in player_dict:
     elif position == 'PF':
         pf[x] = 1
     elif position == 'C':
-        c[x] = 1
+        center[x] = 1
     elif position == 'PG/SG':
         pg[x] = 1
         sg[x] = 1
@@ -113,7 +113,7 @@ for x in player_dict:
         pf[x] = 1
     elif position == 'PF/C':
         pf[x] = 1
-        c[x] = 1
+        center[x] = 1
 
 def calculate_average(array,dictionary):
     answer = 0
@@ -125,15 +125,15 @@ def calculate_salary(array,dictionary):
     answer1 = 0
     for x in array:
         answer1 += dictionary.get(x)[0]
-        print(dictionary.get(x)[0])
-    print(answer1, "this is answer 1")
+        #print(dictionary.get(x)[0])
+    #print(answer1, "this is answer 1")
     return answer1
 
 
-answer = [None] * 3
+answer = [None] * 5
 finalanswer = []
-# for x,y,z in zip(pg,sg,sf):
-#     print(x,y,z)
+for v,w,x,y,z in zip(pg,sg,sf,pf,center):
+    print(v,w,x,y,z)
 average = 0
 temp_average = 0
 total_salary = 0
@@ -144,22 +144,33 @@ for a in pg:
     if a in sf:
         sf.pop(a)
         sf_list.append(a)
-    # print(a)
     answer[0] = a
     for b in sg:
         if b in sf:
             sf.pop(b)
             sf_list.append(b)
-        #print(b)
         answer[1] = b
         for c in sf:
-            # print(c)
+            if c in pf:
+                pf.pop(c)
+                pf_list.append(c)
             answer[2] = c
-            temp_average = calculate_average(answer,player_dict)
-            total_salary = calculate_salary(answer,player_dict)
-            if temp_average > average and total_salary <= starters_total_salary:
-                average = temp_average
-                finalanswer = answer[:]
+            for d in pf:
+                if d in center:
+                    center.pop(d)
+                    c_list.append(d)
+                answer[3] = d
+                for e in center:
+                    answer[4] = e
+                    temp_average = calculate_average(answer,player_dict)
+                    total_salary = calculate_salary(answer,player_dict)
+                    if temp_average > average and total_salary <= starters_total_salary:
+                        average = temp_average
+                        finalanswer = answer[:]
+                if c_list:
+                    center[c_list.pop()] = 1
+            if pf_list:
+                pf[pf_list.pop()] = 1
         if sf_list:
             sf[sf_list.pop()] = 1
     if sg_list:
@@ -170,7 +181,7 @@ for a in pg:
 
 print(finalanswer)
 for x in finalanswer:
-    print(player_dict.get(x)[0])
+     print(player_dict.get(x)[0])
 print(average,total_salary,starters_total_salary)
 # print(type(sys.argv[2]))
 #print(average)
