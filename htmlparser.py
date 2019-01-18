@@ -9,7 +9,6 @@ import sys
 
 
 def cleannames(array):
-    result = []
     result = [x.encode('utf8') for x in array]
     result = [x.replace("Rookie","") for x in result]
     result = [x.replace(".","") for x in result]
@@ -18,7 +17,26 @@ def cleannames(array):
     result = [x.rstrip() for x in result]
     return result
 
+def calculate_average(array,dictionary):
+    answer = 0
+    for x in array:
+        answer += dictionary.get(x)[2]
+    return answer / len(array)
+
+def calculate_salary(array,dictionary):
+    answer1 = 0
+    for x in array:
+        answer1 += dictionary.get(x)[0]
+    return answer1
+
+def merge_dictionaries(*dict_args):
+    result = {}
+    for dictionary in dict_args:
+        result.update(dictionary)
+    return result
+
 starters_total_salary = int(sys.argv[2])
+reserve_salary = 50000 - starters_total_salary
 
 nba_2k19 = "https://www.2kratings.com/nba2k19-team/"
 nba_teams = ["atlanta-hawks","boston-celtics","brooklyn-nets","charlotte-hornets","chicago-bulls","cleveland-cavaliers",
@@ -30,7 +48,6 @@ nba_teams = ["atlanta-hawks","boston-celtics","brooklyn-nets","charlotte-hornets
 players_array = []
 bad_ratings = []
 for x in nba_teams:
-    #print(nba2k19 + x)
     current_team = requests.get(nba_2k19 + x)
     team_page = BeautifulSoup(current_team.content,'html.parser')
     team_result = team_page.find_all('td',class_ = "roster-entry")
@@ -44,22 +61,14 @@ for x in nba_teams:
 players = cleannames(players_array)
 ratings = [int(x) for x in bad_ratings if len(x) == 2]
 players_and_ratings = {player:rating for player,rating in zip(players,ratings)}
-#print(playersandratings)
-
-# ------- THIS WORKS ----------#
 
 column_names = ['Position', 'Name+ID','Name','ID','RosterPosition','Salary','Gameinfo','Teamabbr','AvgPPG']
 mycsv = dapanda.read_csv(sys.argv[1],header = None)
 mycsv.columns = column_names
-#print(mycsv.Name)
-#csvcolumns = [x.replace(" ","") for x in mycsv.columns]
 
-#print(mycsv)
 dirty_name_list = [x for x in mycsv.Name]
 dirty_name_list.pop(0)
 name_list = cleannames(dirty_name_list)
-# for x in namelist:
-#     print(x)
 tonights_player_2kratings = [players_and_ratings.get(x) for x in name_list]
 salary_list = [x for x in mycsv.Salary]
 salary_list.pop(0)
@@ -84,7 +93,6 @@ sf_list = []
 pf_list = []
 c_list = []
 for x in player_dict:
-    # print(x,playerdict.get(x)[0]
     player_value = player_dict.get(x)
     position = player_dict.get(x)[1]
     if position == 'PG':
@@ -103,8 +111,6 @@ for x in player_dict:
     elif position == 'PG/SF':
         pg[x] = 1
         sf[x] = 1
-        #pg_list.append(x)
-        #sf_list.append(x)
     elif position == 'SG/SF':
         sg[x] = 1
         sf[x] = 1
@@ -114,21 +120,6 @@ for x in player_dict:
     elif position == 'PF/C':
         pf[x] = 1
         center[x] = 1
-
-def calculate_average(array,dictionary):
-    answer = 0
-    for x in array:
-        answer += dictionary.get(x)[2]
-    return answer / len(array)
-
-def calculate_salary(array,dictionary):
-    answer1 = 0
-    for x in array:
-        answer1 += dictionary.get(x)[0]
-        #print(dictionary.get(x)[0])
-    #print(answer1, "this is answer 1")
-    return answer1
-
 
 answer = [None] * 5
 finalanswer = []
@@ -178,8 +169,61 @@ for a in pg:
     if sf_list:
         sf[sf_list.pop()] = 1
 
-
 print(finalanswer)
+
 for x in finalanswer:
-     print(player_dict.get(x)[0])
-print(average,total_salary,starters_total_salary)
+    if x in pg:
+        pg.pop(x)
+    if x in sg:
+        sg.pop(x)
+    if x in sf:
+        sf.pop(x)
+    if x in pf:
+        pf.pop(x)
+    if x in center:
+        center.pop(x)
+
+
+guard_players = merge_dictionaries(pg,sg)
+forward_players = merge_dictionaries(sf,pf)
+all_players = merge_dictionaries(guard_players,forward_players,center)
+
+forward_players_list = []
+all_players_list = []
+
+
+reserves = [None] * 3
+reserve_answer = []
+
+# reserve_average = 0
+# reserve_temp_average = 0
+# reserve_total_salary = 0
+#
+# for a in guard_players:
+#     if a in forward_players:
+#         forward_players.pop(a)
+#         forward_players_list.append(a)
+#     if a in all_players:
+#         all_players.pop(a)
+#         all_players_list.append(a)
+#     reserves[0] = a
+#     for b in forward_players:
+#         if b in all_players:
+#             all_players.pop(b)
+#             all_players_list.append(b)
+#         reserves[1] = b
+#         for c in all_players:
+#             reserves[2] = c
+#             reserve_temp_average = calculate_average(reserves,player_dict)
+#             reserve_total_salary = calculate_salary(reserves,player_dict)
+#             if reserve_temp_average > reserve_average and reserve_total_salary <= reserve_salary:
+#                 reserve_average = reserve_temp_average
+#                 reserve_answer = reserves[:]
+#         if all_players_list:
+#             all_players[all_players_list.pop()] = 1
+#     if forward_players_list:
+#         forward_players[forward_players_list.pop()] = 1
+#     if all_players_list:
+#         all_players[all_players_list.pop()] = 1
+#
+# print(reserve_answer)
