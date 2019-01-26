@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from sets import Set
 import requests #allows us to download html from urls
 import csv
 import copy
@@ -9,8 +8,8 @@ import sys
 
 
 def cleannames(array):
-    result = [x.encode('utf8') for x in array]
-    result = [x.replace("Rookie","") for x in result]
+    # result = [x.decode('utf8') for x in array]
+    result = [x.replace("Rookie","") for x in array]
     result = [x.replace(".","") for x in result]
     result = [x.replace("Jr","") for x in result]
     result = [x.replace("\xe2\x80\x99","") for x in result]
@@ -75,13 +74,16 @@ salary_list.pop(0)
 salary_list = [int(x) for x in salary_list]
 position_list = [x for x in mycsv.Position]
 position_list.pop(0)
+fantasy_points_list = [x for x in mycsv.AvgPPG]
+fantasy_points_list.pop(0)
 
 salary_position_2krating = zip(salary_list,position_list,tonights_player_2kratings)
 dirty_player_dict = {key:value for key,value in zip(name_list,salary_position_2krating)} #dirty b/c there's players with a "None"
                                                                                       #2k rating (b/c they're not important enough
                                                                                       #that their names are correct from both draftkings
                                                                                       #and 2k rating website)
-player_dict = {key:value for key,value in dirty_player_dict.iteritems() if value[2] is not None}
+                                                                                      # || if value[1] > 3700
+player_dict = {key:value for key,value in dirty_player_dict.items() if value[2] is not None and value[0] > 4500}
 pg = {}
 sg = {}
 sf = {}
@@ -155,6 +157,7 @@ for a in pg:
                     answer[4] = e
                     temp_average = calculate_average(answer,player_dict)
                     total_salary = calculate_salary(answer,player_dict)
+                    #print(total_salary)
                     if temp_average > average and total_salary <= starters_total_salary:
                         average = temp_average
                         finalanswer = answer[:]
@@ -169,7 +172,7 @@ for a in pg:
     if sf_list:
         sf[sf_list.pop()] = 1
 
-print(finalanswer)
+#print(finalanswer)
 
 for x in finalanswer:
     if x in pg:
@@ -195,35 +198,37 @@ all_players_list = []
 reserves = [None] * 3
 reserve_answer = []
 
-# reserve_average = 0
-# reserve_temp_average = 0
-# reserve_total_salary = 0
-#
-# for a in guard_players:
-#     if a in forward_players:
-#         forward_players.pop(a)
-#         forward_players_list.append(a)
-#     if a in all_players:
-#         all_players.pop(a)
-#         all_players_list.append(a)
-#     reserves[0] = a
-#     for b in forward_players:
-#         if b in all_players:
-#             all_players.pop(b)
-#             all_players_list.append(b)
-#         reserves[1] = b
-#         for c in all_players:
-#             reserves[2] = c
-#             reserve_temp_average = calculate_average(reserves,player_dict)
-#             reserve_total_salary = calculate_salary(reserves,player_dict)
-#             if reserve_temp_average > reserve_average and reserve_total_salary <= reserve_salary:
-#                 reserve_average = reserve_temp_average
-#                 reserve_answer = reserves[:]
-#         if all_players_list:
-#             all_players[all_players_list.pop()] = 1
-#     if forward_players_list:
-#         forward_players[forward_players_list.pop()] = 1
-#     if all_players_list:
-#         all_players[all_players_list.pop()] = 1
-#
-# print(reserve_answer)
+reserve_average = 0
+reserve_temp_average = 0
+reserve_total_salary = 0
+
+for a in guard_players:
+    if a in forward_players:
+        forward_players.pop(a)
+        forward_players_list.append(a)
+    if a in all_players:
+        all_players.pop(a)
+        all_players_list.append(a)
+    reserves[0] = a
+    for b in forward_players:
+        if b in all_players:
+            all_players.pop(b)
+            all_players_list.append(b)
+        reserves[1] = b
+        for c in all_players:
+            reserves[2] = c
+            # print('hi')
+            reserve_temp_average = calculate_average(reserves,player_dict)
+            reserve_total_salary = calculate_salary(reserves,player_dict)
+            if reserve_temp_average > reserve_average and reserve_total_salary <= reserve_salary:
+                reserve_average = reserve_temp_average
+                reserve_answer = reserves[:]
+        if all_players_list:
+            all_players[all_players_list.pop()] = 1
+    if forward_players_list:
+        forward_players[forward_players_list.pop()] = 1
+    if all_players_list:
+        all_players[all_players_list.pop()] = 1
+
+finalfinalanswer = finalanswer + reserve_answer
+print(finalfinalanswer)

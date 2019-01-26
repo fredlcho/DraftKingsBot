@@ -1,0 +1,402 @@
+1547968094436	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.OHE1F9ZBNoA7"
+1547968095270	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968095270	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968096895	Marionette	INFO	Listening on port 41579
+1547968096950	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547968124378	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.s5ie2HwUtas4"
+1547968124712	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968124713	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968125961	Marionette	INFO	Listening on port 42879
+1547968125992	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+[Parent 21897, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 21897, Gecko_IOThread] WARNING: pipe error (92): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547968236524	Marionette	INFO	Stopped listening on port 42879
+[Parent 21536, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 21536, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547968237913	Marionette	INFO	Stopped listening on port 41579
+1547968245948	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jhkwwowXDz3R"
+1547968246272	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968246273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968247597	Marionette	INFO	Listening on port 37001
+1547968247660	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547968538468	Marionette	INFO	Stopped listening on port 37001
+1547968541422	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Cpgszd4R7DKK"
+1547968541758	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968541758	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968543077	Marionette	INFO	Listening on port 35067
+1547968543128	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547968652533	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.uNf3sVkZ3ua0"
+1547968652855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968652855	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968654150	Marionette	INFO	Listening on port 36579
+1547968654239	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547968906140	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0aS2fbB2cZF7"
+1547968906467	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547968906467	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547968907879	Marionette	INFO	Listening on port 35211
+1547968907945	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547969029216	Marionette	INFO	Stopped listening on port 35211
+1547969030337	Marionette	INFO	Stopped listening on port 36579
+1547969031353	Marionette	INFO	Stopped listening on port 35067
+1547969034162	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.aviUnoa21avr"
+1547969034503	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969034503	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969035794	Marionette	INFO	Listening on port 46369
+1547969035868	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547969123867	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.h5xlTrmAsJvD"
+1547969124191	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969124191	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969125499	Marionette	INFO	Listening on port 37671
+1547969125574	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969147934	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.fU8yi0PybHmd"
+1547969148267	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969148267	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969149585	Marionette	INFO	Listening on port 35993
+1547969149640	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547969269306	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.vo8MKrtc9EGX"
+1547969269653	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969269653	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969271095	Marionette	INFO	Listening on port 37303
+1547969271118	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969322866	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.55L2N0TYl9jE"
+1547969323196	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969323196	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969324451	Marionette	INFO	Listening on port 38053
+1547969324473	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547969364244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.MYCb3QNhgBtH"
+1547969364572	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969364572	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969365897	Marionette	INFO	Listening on port 44927
+1547969365956	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969395129	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.UlhcYuRBDFNo"
+1547969395463	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969395463	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969396822	Marionette	INFO	Listening on port 36193
+1547969396836	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969444023	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.568pGcGPf3Oh"
+1547969444363	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969444363	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969445714	Marionette	INFO	Listening on port 46279
+1547969445740	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969479394	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.L1cAiSxfNPsx"
+1547969479772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969479772	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969481173	Marionette	INFO	Listening on port 36917
+1547969481202	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+[Parent 26286, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 26286, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969489951	Marionette	INFO	Stopped listening on port 46279
+1547969492236	Marionette	INFO	Stopped listening on port 36193
+1547969496279	Marionette	INFO	Stopped listening on port 44927
+[Parent 25256, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 25256, Gecko_IOThread] WARNING: pipe error (92): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969497243	Marionette	INFO	Stopped listening on port 38053
+1547969498138	Marionette	INFO	Stopped listening on port 37303
+[Parent 26655, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969498454	Marionette	INFO	Stopped listening on port 36917
+[Parent 24168, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969499442	Marionette	INFO	Stopped listening on port 37671
+[Parent 23809, Gecko_IOThread] WARNING: pipe error (68): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969500418	Marionette	INFO	Stopped listening on port 46369
+1547969689785	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QQtZyTrLK8bc"
+1547969690107	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969690107	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969691405	Marionette	INFO	Listening on port 40509
+1547969691495	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969721789	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8NdjLHygwBI7"
+1547969722119	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969722119	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969723447	Marionette	INFO	Listening on port 43539
+1547969723495	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969746305	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JlGd4oo7MuKE"
+1547969746634	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969746634	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969747937	Marionette	INFO	Listening on port 44639
+1547969748013	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 27390, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 27390, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 27390, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547969751295	Marionette	INFO	Stopped listening on port 43539
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547969752518	Marionette	INFO	Stopped listening on port 40509
+1547969753664	Marionette	INFO	Stopped listening on port 35993
+1547969771966	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.zw1THr9tKJBe"
+1547969772292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547969772293	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547969773655	Marionette	INFO	Listening on port 37073
+1547969773674	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1547970279886	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.oYVJo4eVtC7s"
+1547970280210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547970280210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547970281570	Marionette	INFO	Listening on port 43667
+1547970281593	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547970312204	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.4pXn5Dtnpq70"
+1547970312530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1547970312530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1547970313882	Marionette	INFO	Listening on port 43153
+1547970313921	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 28515, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+[Parent 28515, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1547970315937	Marionette	INFO	Stopped listening on port 43667
+1547970317157	Marionette	INFO	Stopped listening on port 37073
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+JavaScript warning: https://cdn.geocomply.com/101/gc-html5.js, line 1: unreachable code after return statement
+1547970318178	Marionette	INFO	Stopped listening on port 44639
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+[Parent 28879, Gecko_IOThread] WARNING: pipe error (86): Connection reset by peer: file /build/firefox-wWf_B4/firefox-64.0+build3/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1548182100477	Marionette	INFO	Stopped listening on port 43153
